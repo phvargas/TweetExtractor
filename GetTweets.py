@@ -33,10 +33,10 @@ def tweets(handler):   # handler is twitter user name without @ example phone_du
     no_exception = True
     while no_exception:
         max_id = current_id
-
         try:
             #timeline_block = api.GetUserTimeline(user_id=user.id,  count=max_count, max_id=max_id)
             timeline_block = api.GetHomeTimeline(user_id=user.id, count=max_count, max_id=max_id)
+
             for all_tweets in timeline_block:
                 if current_id != all_tweets.id:
                     current_id = all_tweets.id
@@ -45,6 +45,10 @@ def tweets(handler):   # handler is twitter user name without @ example phone_du
                 if len(timeline_block) == 1 and current_id == all_tweets.id:
                     print('First ever tweet')
                     no_exception = False
+
+            if not timeline_block:
+                print('There are no more tweets!!')
+                no_exception = False
 
         except twitter.error.TwitterError as e:
             print('We have to wait 15 mins.')
