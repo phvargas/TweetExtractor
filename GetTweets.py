@@ -13,10 +13,10 @@ __email__ = 'pvargas@cs.odu.edu'
 
 
 def tweets(handler):   # handler is twitter user name without @ example phone_dude for @phone_dude
-    api = twitter.Api(consumer_key='w11PMTOUlj5sGIKjnSII7AcT9',
-                      consumer_secret='4if8m3WWrWvHFZ4wHKRXAgrb7mBuRBRboHKUDwoT4AfuoL97hB',
-                      access_token_key='3348219965-FBcGASapNIvNxFNGbaIZw1XuE7s4NUIWBwEMN9i',
-                      access_token_secret='v2SD9GCRNqr6GTSntP3HgCg14ijw9zMwA0NJ4cPym82TC')
+    api = twitter.Api(consumer_key='M1YafCTOUlj5sGIKjnSII7AcT9',
+                      consumer_secret='4if8m3WWrWvHFZ4wHasdfasrb7mBuRBRboHKUDwoT4AfuoL97hB',
+                      access_token_key='3348219asdfasdfasfsadfasdfsadfsadfi',
+                      access_token_secret='vadfasdfasdfsafdsaC')
 
     user = api.GetUser(screen_name=handler)
 
